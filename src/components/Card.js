@@ -5,14 +5,16 @@ const Card = ({ dog, loading, updateDog }) => {
 
     if(loading) return <Spinner />
 
+    //console.log(dog);
+
     return (
-        <div className="card bounce" onClick={() => updateDog(dog.breed.id)}>
+        <div className="card bounce" onClick={() => updateDog(dog.breeds.id)}>
             <img 
-                src={dog.image}
+                src={dog.url}
                 alt="dog"
             />
             <p>
-                {dog.breed.name}
+                {dog.breeds.name}
             </p>
         </div>
     )
